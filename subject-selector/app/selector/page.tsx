@@ -1,5 +1,7 @@
 "use client"
 
+import Breadcrumbs from "../components/breadcrumbs"
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -39,6 +41,8 @@ export default function Selector() {
   }
 
   return (
+    <>
+    <Breadcrumbs currentPage="Subject Selector"></Breadcrumbs>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
@@ -60,5 +64,6 @@ export default function Selector() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
+    </>
   )
 }

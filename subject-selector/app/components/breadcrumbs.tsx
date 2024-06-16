@@ -8,7 +8,7 @@ import {
   } from "@/components/ui/breadcrumb"
 
 
-export default function Breadcrumbs(){
+export default function Breadcrumbs(props : any){
     return(
         <>
         <Breadcrumb>
@@ -18,11 +18,7 @@ export default function Breadcrumbs(){
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-        <BreadcrumbLink href="/components">Components</BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbSeparator />
-        <BreadcrumbItem>
-        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+        <BreadcrumbLink href="/components">{props.currentPage}</BreadcrumbLink>
         </BreadcrumbItem>
         </BreadcrumbList>
         </Breadcrumb>

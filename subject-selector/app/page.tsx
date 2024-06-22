@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Popup from "./Signin-up/page";
 import Link from "next/link";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <div className="pb-4">Welcome To Subject Selector</div>
       <div className="pb-4">Click here to go to forms</div>
       <Button type="submit"><Link href="/selector">Redirect</Link></Button>
+      <Popup />
       </>
     </main>
   );
